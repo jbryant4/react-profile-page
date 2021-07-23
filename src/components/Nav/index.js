@@ -23,7 +23,7 @@ function Nav(props) {
                 <ul className="flex-row">
                     {tabs.map(tab => {
                         return(
-                            <li key={tab} onClick = {setCurrentTab(tab)}>
+                            <li key={tab} onClick = {() => setCurrentTab(tab)}>
                             {tab}    
                             </li>
                         )

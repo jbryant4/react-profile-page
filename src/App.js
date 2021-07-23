@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { about, details, projects, contact } from "./profileData"
+// import { about, details, projects, contact } from "./profileData"
 import Nav from './components/Nav'
 import About from './components/About'
 import Contact from './components/Contact'
