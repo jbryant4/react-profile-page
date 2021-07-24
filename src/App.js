@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-// import { about, details, projects, contact } from "./profileData"
+import React, { useState } from 'react';
+import { about, details, projects, contact } from "./profileData"
 import Nav from './components/Nav'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -15,27 +15,31 @@ function App() {
   const renderPage = () => {
     switch (currentTab) {
       case 'Projects':
-        return <Projects />
+        return <Projects
+          projectInfo={projects}
+        />
         break
       case 'Contact':
         return <Contact />
         break
       default:
-        return <About />
+        return <About
+          aboutInfo={about}
+        />
     }
   }
 
   return (
-    <div>
+    <>
       <Nav
         tabs={tabs}
         setCurrentTab={setCurrentTab}
         currentTab={currentTab}
       ></Nav>
-      <section>
+      <main>
         {renderPage()}
-      </section>
-    </div>
+      </main>
+    </>
   );
 }
 
