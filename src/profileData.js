@@ -18,7 +18,8 @@ export const projects =
             image: uSingImg,
             description: 'An application to find our favorite songs/artists as well as their bio, lyrics and next events.',
             repo: 'https://github.com/jbryant4/uSing',
-            app: 'https://jbryant4.github.io/uSing/'
+            app: 'https://jbryant4.github.io/uSing/',
+            // usage: html5
         },
         {
             title: 'myMovieList',

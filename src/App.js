@@ -1,22 +1,31 @@
 import React, { useState } from 'react';
 import { about, details, projects, contact } from "./profileData"
+
 import Nav from './components/Nav'
 import About from './components/About'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
 
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fab);
+
 
 function App() {
-  const tabs = ['About me', 'Projects', 'Contact']
+  const tabs = ['About Me', 'Projects', 'Skills', 'Contact']
 
   const [currentTab, setCurrentTab] = useState(tabs[0])
+  const [currentProject, setCurrentProject] = useState(projects[0])
 
   const renderPage = () => {
     switch (currentTab) {
       case 'Projects':
         return <Projects
-          projectInfo={projects}
+          projects={projects}
+          currentProject={currentProject}
+          setCurrentProject={setCurrentProject}
         />
         break
       case 'Contact':
