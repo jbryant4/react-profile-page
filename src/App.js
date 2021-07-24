@@ -5,7 +5,7 @@ import Nav from './components/Nav'
 import About from './components/About'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
-
+import Skills from './components/Skills'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -30,6 +30,9 @@ function App() {
         break
       case 'Contact':
         return <Contact />
+        break
+      case 'Skills':
+        return <Skills />
         break
       default:
         return <About

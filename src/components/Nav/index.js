@@ -65,7 +65,7 @@ function Nav({tabs, setCurrentTab, currentTab }) {
 
     return (
         <div>
-            <Button onClick={toggleDrawer(left, true)}><ViewHeadlineIcon/></Button>
+            <Button onClick={toggleDrawer(left, true)}><ViewHeadlineIcon/> BryantC0der</Button>
             <Drawer anchor={left} open={state[left]} onClose={toggleDrawer(left, false)}>
                 {list(left)}
             </Drawer>
