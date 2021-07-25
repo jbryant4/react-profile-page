@@ -16,18 +16,35 @@ import AppsIcon from '@material-ui/icons/Apps';
 import ViewHeadlineIcon from '@material-ui/icons/ViewHeadline';
 
 const useStyles = makeStyles({
-    list: {
-        width: 250,
+    flex: {
+        display: 'flex',
+        flexWrap:'wrap',
+        alignItems: 'center',
+        justifyContent:'space-around',
+        height: '100%',
+    
     },
-    fullList: {
-        width: 'auto',
+    list: {
+        listStyleType: 'none',
+        display: 'inline-flex',
+        margin: 'auto',
+        padding: '0' , 
+    },
+    item: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        margin: 'auto',
+        height: '100%',
+        width: 'auto'
     },
 });
 
 // Icons are in an array that lines up with the tabs array. Tabs is in APP.js 
-const Icons = [<PersonIcon/>, <AppsIcon />, <CodeIcon />, <MailIcon />];
+const Icons = [<PersonIcon />, <AppsIcon />, <CodeIcon />, <MailIcon />];
 
-function Nav({tabs, setCurrentTab, currentTab }) {
+function Nav({ tabs, setCurrentTab, currentTab }) {
     const classes = useStyles();
     const [state, setState] = React.useState({
         left: false,
@@ -43,29 +60,30 @@ function Nav({tabs, setCurrentTab, currentTab }) {
 
     const list = (anchor) => (
         <div
-            className={clsx(classes.list, {
-                [classes.fullList]: anchor === 'top' || anchor === 'bottom',
-            })}
+            className={classes.flex}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
+            <List className={classes.list}>
                 {tabs.map((text, index) => (
-                    <ListItem button onClick={()=> setCurrentTab(text)} key={text}>
+                    <ListItem  className={classes.item} button onClick={() => setCurrentTab(text)} key={text}>
                         <ListItemIcon>{Icons[index]}</ListItemIcon>
-                        <ListItemText primary={text} />
+                        <ListItemText  primary={text} />
                     </ListItem>
                 ))}
             </List>
         </div>
     );
 
-    const left = 'left';
+    const left = 'top';
 
     return (
         <div>
-            <Button onClick={toggleDrawer(left, true)}><ViewHeadlineIcon/> BryantC0der</Button>
+            <div>
+                <Button onClick={toggleDrawer(left, true)}>NAV<ViewHeadlineIcon /> </Button>
+                <p>BryantC0der</p>
+            </div>
             <Drawer anchor={left} open={state[left]} onClose={toggleDrawer(left, false)}>
                 {list(left)}
             </Drawer>

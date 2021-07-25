@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { about, details, projects, contact } from "./profileData"
+import { about, details, projects, contact, skills } from "./profileData"
 
 import Nav from './components/Nav'
 import About from './components/About'
 import Contact from './components/Contact'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
+import Footer from './components/Footer'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -32,7 +33,9 @@ function App() {
         return <Contact />
         break
       case 'Skills':
-        return <Skills />
+        return <Skills
+          skills={skills}
+        />
         break
       default:
         return <About
@@ -47,10 +50,13 @@ function App() {
         tabs={tabs}
         setCurrentTab={setCurrentTab}
         currentTab={currentTab}
-      ></Nav>
+      />
       <main>
         {renderPage()}
       </main>
+      <Footer
+        contact={contact}
+      />
     </>
   );
 }

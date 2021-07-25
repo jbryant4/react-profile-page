@@ -59,8 +59,9 @@ export const projects =
     ];
 
 export const contact = {
-    github: '',
-    linkedIn: ''
+    github: 'https://github.com/jbryant4',
+    linkedIn: 'https://www.linkedin.com/in/joseph-bryant-927335206/',
+    resume: 'https://drive.google.com/file/d/1rkX3HvzZXRONy-jKBmOHPTzUR_-QXJiR/view?usp=sharing'
 };
 
 export const details =
@@ -69,3 +70,39 @@ export const details =
     email: "bryantc0der@gmail.com",
     location: "Mesa, AZ"
 };
+
+export const skills = [
+    {
+        category:'Front End',
+        skills: ['React', 'Handlebars', 'HTML', 'CSS', 'JavaScript', 'ES6', 'JQuery', 'Bootstrap', 'Materialize', 'Foundation']
+    },
+    {
+        category:'API Creation and Implementation',
+        skills: ['Web APIs', 'Third-Party APIs', 'Server-Side APIs', 'RESTful APIs', 'GraphQL']
+    },
+    {
+        category:'Node.js',
+        skills: ['NPM packages','inquire','jest', 'Other packages']
+    },
+    {
+        category:'Server Creation and Utilization',
+        skills: ['Express.js', 'Heroku', 'MongoDB Atlas','Insomnia']
+    },
+    {
+        category:'Databases',
+        skills: ['MySQL - Sequalize', 'MongoDB - Mongoose', 'CRUD operations', 'MySQL workbench']
+    },
+    {
+        category:'Coding paradigms',
+        skills: ['Object Oriented Programing (OOP)', 'Test Driven Development (TDD)', 'Object-Relational Mapping (ORM)', 'Object-Document Mapping (ODM)']
+    },
+    {
+        category:'Source Control',
+        skills: ['Git', 'GitHub']
+    },
+    {
+        category:'Others',
+        skills: ['PWA', 'MERN']
+    },
+   
+]
