@@ -9,8 +9,9 @@ const useStyles = makeStyles({
         display: 'flex',
         flexWrap:'wrap',
         alignItems: 'center',
+        justifyContent: 'center',
         height: '100%',
-    
+        padding: '100px 0',
     },
     list: {
         listStyleType: 'none',

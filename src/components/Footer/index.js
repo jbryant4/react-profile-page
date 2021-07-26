@@ -10,7 +10,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 const useStyles = makeStyles({
     footer: {
         backgroundColor: 'green',
-        position: 'absolute',
+        position: 'fixed',
         bottom: '0',
         width: '100%', 
         height: '75px'

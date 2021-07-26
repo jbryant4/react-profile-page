@@ -23,7 +23,8 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'space-around',
         height: '100%',
-
+        padding: '100px 0',
+    
     },
     list: {
         listStyleType: 'none',

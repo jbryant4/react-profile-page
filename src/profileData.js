@@ -3,7 +3,8 @@ import uSingImg from './assets/images/uSing.png';
 import mymovielistImg from './assets/images/mymovielis.png';
 import drwhoImg from './assets/images/drwho.png';
 
-
+//! Usage names in fab
+// html5, css3-alt, js, node, react, bootstrap, 
 
 export const about =
 {
