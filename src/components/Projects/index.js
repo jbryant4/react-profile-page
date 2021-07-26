@@ -17,6 +17,29 @@ const useStyles = makeStyles({
     media: {
         height: 350,
     },
+    flex: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        height: '100%',
+
+    },
+    list: {
+        listStyleType: 'none',
+        display: 'inline-flex',
+        margin: 'auto',
+        padding: '0',
+    },
+    item: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        margin: 'auto',
+        height: '100%',
+        width: 'auto'
+    },
 });
 
 function Projects({ projects, currentProject, setCurrentProject }) {
@@ -28,11 +51,13 @@ function Projects({ projects, currentProject, setCurrentProject }) {
 
 
     return (
-        <div className='container'>
+        <div className={classes.flex}>
 
             <div>
                 <button onClick={() => setCurrentProject(projects[projectIndex() - 1] || currentProject)}>Previous Project</button>
+                <button onClick={() => setCurrentProject(projects[projectIndex() + 1] || currentProject)}>Next Project</button>
             </div>
+            
             <Card className={classes.root}>
                 <CardActionArea>
                     <CardMedia
@@ -50,10 +75,10 @@ function Projects({ projects, currentProject, setCurrentProject }) {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="small" color="primary" onClick={() => window.location.href= currentProject.repo}>
+                    <Button size="small" color="primary" onClick={() => window.open( currentProject.repo, '_blank')}>
                         Repo
                     </Button>
-                    <Button size="small" color="primary" onClick={() => window.location.href= currentProject.app}>
+                    <Button size="small" color="primary" onClick={() =>  window.open( currentProject.app, '_blank')}>
                         App
                     </Button>
                 </CardActions>
@@ -62,13 +87,7 @@ function Projects({ projects, currentProject, setCurrentProject }) {
                 <h2>Usage</h2>
                 <FontAwesomeIcon icon={['fab', 'html5']} />
             </div>
-            <div>
-                <button onClick={() => setCurrentProject(projects[projectIndex() + 1] || currentProject)}>Next Project</button>
-            </div>
-
-
-
-        </div>
+        </div >
     )
 }
 

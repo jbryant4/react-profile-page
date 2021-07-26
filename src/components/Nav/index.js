@@ -18,17 +18,24 @@ import ViewHeadlineIcon from '@material-ui/icons/ViewHeadline';
 const useStyles = makeStyles({
     flex: {
         display: 'flex',
-        flexWrap:'wrap',
+        flexWrap: 'wrap',
         alignItems: 'center',
-        justifyContent:'space-around',
+        justifyContent: 'space-around',
         height: '100%',
-    
+    },
+    header: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        height: 75,
+        padding: '0 20px 5px 10px'
     },
     list: {
         listStyleType: 'none',
         display: 'inline-flex',
         margin: 'auto',
-        padding: '0' , 
+        padding: '0',
     },
     item: {
         display: 'flex',
@@ -67,9 +74,9 @@ function Nav({ tabs, setCurrentTab, currentTab }) {
         >
             <List className={classes.list}>
                 {tabs.map((text, index) => (
-                    <ListItem  className={classes.item} button onClick={() => setCurrentTab(text)} key={text}>
+                    <ListItem className={classes.item} button onClick={() => setCurrentTab(text)} key={text}>
                         <ListItemIcon>{Icons[index]}</ListItemIcon>
-                        <ListItemText  primary={text} />
+                        <ListItemText primary={text} />
                     </ListItem>
                 ))}
             </List>
@@ -79,15 +86,16 @@ function Nav({ tabs, setCurrentTab, currentTab }) {
     const left = 'top';
 
     return (
-        <div>
-            <div>
+        <header>
+            <div className={classes.header}>
                 <Button onClick={toggleDrawer(left, true)}>NAV<ViewHeadlineIcon /> </Button>
                 <p>BryantC0der</p>
             </div>
             <Drawer anchor={left} open={state[left]} onClose={toggleDrawer(left, false)}>
                 {list(left)}
             </Drawer>
-        </div>
+        </header>
+
     );
 }
 
