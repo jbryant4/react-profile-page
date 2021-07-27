@@ -2,14 +2,21 @@ import familyPhoto from './assets/images/family.jpg';
 import uSingImg from './assets/images/uSing.png';
 import mymovielistImg from './assets/images/mymovielis.png';
 import drwhoImg from './assets/images/drwho.png';
+import coupleImg from './assets/images/wife.jpg'
+import board from './assets/images/board-pic.jpg'
+import league from './assets/images/league-pic.jpg'
+import pc from './assets/images/pc-build.jpg'
+import shows from './assets/images/shows.jpg'
+import chess from './assets/images/chess.png'
 
 //! Usage names in fab
 // html5, css3-alt, js, node, react, bootstrap, 
 
 export const about =
 {
-    image: familyPhoto,
-    body: 'Hi my name is Joseph Bryant but I go by Joe. I would consider myself a family man and a practical nerd. I have always had an interest in the tech world. Either playing video games, building custom computers, or just researching new programs, I find that there is so much to explore in this world. From a young age, I was always told that there is a time for work and a time to play. I am a firm believer that the quality of work put into a project will equal the quality of the projects output.Being the oldest of 8 kids in my family, I always knew that I wanted to have a big family. Nothing is more important to me than my familly, they are my pride and joy. My wife and I have been married for two and a half years. We have two adorable kids. An overly energetic boy named Samuel Joseph (SJ), who is almost 2 years old, and a 4 month old girl named Charlotte'
+    image: [coupleImg, familyPhoto],
+    body: 'Hi my name is Joseph Bryant but I go by Joe. I would consider myself a family man and a practical nerd. I have always had an interest in the tech world. Either playing video games, building custom computers, or just researching new programs, I find that there is so much to explore in this world. From a young age, I was always told that there is a time for work and a time to play. I am a firm believer that the quality of work put into a project will equal the quality of the projects output.Being the oldest of 8 kids in my family, I always knew that I wanted to have a big family. Nothing is more important to me than my familly, they are my pride and joy. My wife and I have been married for two and a half years. We have two adorable kids. An overly energetic boy named Samuel Joseph (SJ), who is almost 2 years old, and a 4 month old girl named Charlotte',
+    hobbies: [board,league,pc,shows, chess]
 };
 
 export const projects =

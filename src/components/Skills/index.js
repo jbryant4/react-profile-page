@@ -44,7 +44,7 @@ function Skills({ skills }) {
     return (
         <div className={classes.container}>
             {skills.map(skill => (
-                <div className={classes.skill}>
+                <div key={skill} className={classes.skill}>
                     <h3 className={classes.title}>{skill.category}</h3>
                     <List className={classes.list}>
                         {skill.skills.map(text => (
