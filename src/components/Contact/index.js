@@ -1,13 +1,28 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import { makeStyles } from '@material-ui/styles';
 
-
+const useStyles = makeStyles({
+ 
+    container: {
+        display: 'flex',
+        flexDirection:'column',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        height: '100%',
+        padding: '15px 0',
+        width: 375,
+        height: 500
+    },
+});
 
 function Contact() {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const { name, email, message } = formState
     const [errorMessage, setErrorMessage] = useState('');
-    //JSX
+    
+    const classes = useStyles();
 
     function handleChange(e) {
         if (e.target.name === 'email') {
@@ -42,22 +57,17 @@ function Contact() {
     return (
         <section>
             <h1 data-testid='h1tag'>Contact me</h1>
-            <form  id="contact-form" onSubmit={handleSubmit}>
+            <form id="contact-form" onSubmit={handleSubmit} className={classes.container}>
 
-                <div>
-                    <label htmlFor="name">Name:</label>
-                    <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
-                </div>
+                <label htmlFor="name">Name:</label>
+                <input type="text" defaultValue={name} onBlur={handleChange} name="name" />
 
-                <div>
-                    <label htmlFor="email">Reply Email Address:</label>
-                    <input type="email" defaultValue={email} onBlur={handleChange} name="email" />
-                </div>
+                <label htmlFor="email">Reply Email Address:</label>
+                <input type="email" defaultValue={email} onBlur={handleChange} name="email" />
 
-                <div>
-                    <label htmlFor="message">Message:</label>
-                    <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5" />
-                </div>
+                <label htmlFor="message">Message:</label>
+                <textarea name="message" defaultValue={message} onBlur={handleChange} rows="5" />
+
                 {errorMessage && (
                     <div>
                         <p className="error-text">{errorMessage}</p>

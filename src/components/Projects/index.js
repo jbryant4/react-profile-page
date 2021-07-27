@@ -24,6 +24,7 @@ const useStyles = makeStyles({
         justifyContent: 'space-around',
         height: '100%',
         padding: '100px 0',
+        width: '100%'
     
     },
     list: {
@@ -56,6 +57,7 @@ function Projects({ projects, currentProject, setCurrentProject }) {
 
             <div>
                 <button onClick={() => setCurrentProject(projects[projectIndex() - 1] || currentProject)}>Previous Project</button>
+                <p>{projectIndex() + 1}/{projects.length}</p>
                 <button onClick={() => setCurrentProject(projects[projectIndex() + 1] || currentProject)}>Next Project</button>
             </div>
             

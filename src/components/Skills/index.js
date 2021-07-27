@@ -5,13 +5,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
-    flex: {
+    container: {
         display: 'flex',
         flexWrap:'wrap',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100%',
         padding: '100px 0',
+        maxWidth: 850
     },
     list: {
         listStyleType: 'none',
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     skill: {
         border: '2px solid red',
         height: 200,
-        width: 400
+        width: 350
     },
     title: {
         margin:'5px auto 5px 10px'
@@ -42,7 +42,7 @@ function Skills({ skills }) {
     const classes = useStyles();
 
     return (
-        <div className={classes.flex}>
+        <div className={classes.container}>
             {skills.map(skill => (
                 <div className={classes.skill}>
                     <h3 className={classes.title}>{skill.category}</h3>

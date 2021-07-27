@@ -24,13 +24,17 @@ const useStyles = makeStyles({
         justifyContent: 'space-around',
         height: '100%',
     },
-    header: {
+    nav: {
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: 'space-between',
-        height: 75,
-        padding: '0 20px 5px 10px'
+        padding: '0',
+        position: 'fixed',
+        top: '0',
+        width: '100%',
+        zIndex: 3,
+        backgroundColor: 'green',
     },
     list: {
         listStyleType: 'none',
@@ -47,15 +51,8 @@ const useStyles = makeStyles({
         height: '100%',
         width: 'auto'
     },
-    nav: {
-        backgroundColor: 'green',
-        minHeight: '5vh',
-        maxHeight: '10vh',
-        position: 'fixed',
-        top: '0',
-        width: '100%',
-        zIndex: 3
-
+    p: {
+        padding: '0 10px'
     }
 });
 
@@ -97,15 +94,15 @@ function Nav({ tabs, setCurrentTab, currentTab }) {
     const left = 'top';
 
     return (
-        <header className={classes.nav}>
-            <div className={classes.header}>
+        <>
+            <div className={classes.nav}>
                 <Button onClick={toggleDrawer(left, true)}>NAV<ViewHeadlineIcon /> </Button>
-                <p>BryantC0der</p>
+                <p className={classes.p}>BryantC0der</p>
             </div>
             <Drawer anchor={left} open={state[left]} onClose={toggleDrawer(left, false)}>
                 {list(left)}
             </Drawer>
-        </header>
+        </>
 
     );
 }
