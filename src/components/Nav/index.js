@@ -23,6 +23,7 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'space-around',
         height: '100%',
+        color: '#dbb95f'
     },
     nav: {
         display: 'flex',
@@ -34,13 +35,15 @@ const useStyles = makeStyles({
         top: '0',
         width: '100%',
         zIndex: 3,
-        backgroundColor: 'green',
+        backgroundColor: '#422e13',
+        
     },
     list: {
         listStyleType: 'none',
         display: 'inline-flex',
         margin: 'auto',
         padding: '0',
+        color: '#878532'
     },
     item: {
         display: 'flex',
@@ -49,10 +52,28 @@ const useStyles = makeStyles({
         alignItems: 'center',
         margin: 'auto',
         height: '100%',
-        width: 'auto'
+        width: 'auto',
+        
     },
     p: {
-        padding: '0 10px'
+        padding: '0 10px',
+        color: '#dbb95f'
+    },
+    icon: {
+        color: '#dbb95f'
+    },
+    iconClicked: {
+        color: '#537636'
+    },
+    itemClick: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        margin: 'auto',
+        height: '100%',
+        width: 'auto',
+        color: '#537636'
     }
 });
 
@@ -82,8 +103,8 @@ function Nav({ tabs, setCurrentTab, currentTab }) {
         >
             <List className={classes.list}>
                 {tabs.map((text, index) => (
-                    <ListItem className={classes.item} button onClick={() => setCurrentTab(text)} key={text}>
-                        <ListItemIcon>{Icons[index]}</ListItemIcon>
+                    <ListItem className={currentTab === text ? classes.itemClick : classes.item} button onClick={() => setCurrentTab(text)} key={text}>
+                        <ListItemIcon className={currentTab === text ? classes.iconClicked : classes.icon}>{Icons[index]}</ListItemIcon>
                         <ListItemText primary={text} />
                     </ListItem>
                 ))}
@@ -96,7 +117,7 @@ function Nav({ tabs, setCurrentTab, currentTab }) {
     return (
         <>
             <div className={classes.nav}>
-                <Button onClick={toggleDrawer(left, true)}>NAV<ViewHeadlineIcon /> </Button>
+                <Button  className={classes.p} onClick={toggleDrawer(left, true)}>NAV<ViewHeadlineIcon  /> </Button>
                 <p className={classes.p}>BryantC0der</p>
             </div>
             <Drawer anchor={left} open={state[left]} onClose={toggleDrawer(left, false)}>

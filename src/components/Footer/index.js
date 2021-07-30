@@ -9,7 +9,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 // style for the footer section
 const useStyles = makeStyles({
     footer: {
-        backgroundColor: 'green',
+        backgroundColor: '#422e13',
         position: 'fixed',
         bottom: '0',
         width: '100%', 
@@ -29,7 +29,8 @@ const useStyles = makeStyles({
     },
     item: {
         margin: 'auto 20px',
-        height: '100%'
+        height: '100%',
+        color: '#dbb95f'
     }
 });
 
@@ -42,9 +43,9 @@ function Footer({ contact }) {
             <div className={classes.flex}>
                     <ul className={classes.list}>
                         {/* this is for later */}
-                        <li className={classes.item}><a href={contact.resume} target="blank" ><DescriptionIcon fontSize='large'/></a></li>
-                        <li className={classes.item}><a href={contact.github} target="blank" ><GitHubIcon fontSize='large'/></a></li>
-                        <li className={classes.item}><a href={contact.linkedIn} target="blank" ><LinkedInIcon fontSize='large'/></a></li>
+                        <li><a href={contact.resume} target="blank" ><DescriptionIcon className={classes.item} fontSize='large'/></a></li>
+                        <li><a href={contact.github} target="blank" ><GitHubIcon className={classes.item} fontSize='large'/></a></li>
+                        <li><a href={contact.linkedIn} target="blank" ><LinkedInIcon className={classes.item} fontSize='large'/></a></li>
                     </ul>
             </div>
         </footer>
