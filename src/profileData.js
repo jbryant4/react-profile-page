@@ -27,42 +27,47 @@ export const projects =
             description: 'An application to find our favorite songs/artists as well as their bio, lyrics and next events.',
             repo: 'https://github.com/jbryant4/uSing',
             app: 'https://jbryant4.github.io/uSing/',
-            // usage: html5
+            usage: ['html5',' css3-alt', 'js', 'node', 'react', 'bootstrap']
         },
         {
             title: 'myMovieList',
             image: mymovielistImg,
             description: 'As a user, I want to be able to create, compare and like custom movie lists; made by multiple users, so that I can see what everyone has been watching during quarantine.',
             repo: 'https://github.com/jbryant4/Project2-Group1',
-            app: 'https://mymovielistapp.herokuapp.com/'
+            app: 'https://mymovielistapp.herokuapp.com/',
+            usage: ['html5',' css3-alt', 'js', 'node', 'react', 'bootstrap']
         },
         {
             title: 'Budget Tracker',
             image: '',
             description: 'A simple PWA app that allows the user to track their budget with offline functionality.',
             repo: 'https://github.com/jbryant4/budget-tracker',
-            app: 'https://jbryant-budget-tracker.herokuapp.com/'
+            app: 'https://jbryant-budget-tracker.herokuapp.com/',
+            usage: ['html5',' css3-alt', 'js', 'node', 'react', 'bootstrap']
         },
         {
             title: 'Task-Master Pro',
             image: '',
             description: 'A simple tracking application that allows you to create a task and track its progrress.',
             repo: 'https://github.com/jbryant4/taskmaster-pro',
-            app: 'https://jbryant4.github.io/taskmaster-pro/'
+            app: 'https://jbryant4.github.io/taskmaster-pro/',
+            usage: ['html5',' css3-alt', 'js', 'node', 'react', 'bootstrap']
         },
         {
             title: 'Whovian Quiz',
             image: drwhoImg,
             description: 'A simple javascript time game quiz with an alien twist',
             repo: 'https://github.com/jbryant4/timed-quiz',
-            app: 'https://jbryant4.github.io/timed-quiz/'
+            app: 'https://jbryant4.github.io/timed-quiz/',
+            usage: ['html5',' css3-alt', 'js', 'node', 'react', 'bootstrap']
         },
         {
             title: 'Weather Board',
             image: '',
             description: 'A weather app that gathers data from a 3rd party api to show the user a 5 day forecast of the city they enter into the search form',
             repo: 'https://github.com/jbryant4/weather-board',
-            app: 'https://jbryant4.github.io/weather-board/'
+            app: 'https://jbryant4.github.io/weather-board/',
+            usage: ['html5',' css3-alt', 'js', 'node', 'react', 'bootstrap']
         }
     ];
 

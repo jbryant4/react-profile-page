@@ -18,6 +18,8 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const useStyles = makeStyles({
     root: {
         maxWidth: 500,
+        color: '#537636',
+        backgroundColor: '#7f5f16'
     },
     media: {
         height: 350,
@@ -30,7 +32,8 @@ const useStyles = makeStyles({
         height: '100%',
         padding: '20px 0 100px 0',
         width: '100%',
-        textAlign: "center"
+        textAlign: "center",
+        color: '#537636'
     },
     flexInner: {
         display: 'flex',
@@ -38,11 +41,23 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'space-evenly',
         height: '100%',
-        width: '100%'
+        width: '100%',
     },
     arrow: {
         height: "20px"
     },
+    btn: {
+
+        color: '#537636',
+        backgroundColor: '#537636'
+
+    },
+    icon: {
+        fontSize: 35
+    },
+    smldivs: {
+        width: '50%'
+    }
 });
 
 function Projects({ projects, currentProject, setCurrentProject }) {
@@ -74,16 +89,16 @@ function Projects({ projects, currentProject, setCurrentProject }) {
                             <Typography gutterBottom variant="h5" component="h2">
                                 {currentProject.title}
                             </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
+                            <Typography variant="body2" component="p">
                                 {currentProject.description}
                             </Typography>
                         </CardContent>
                     </CardActionArea>
                     <CardActions className={classes.flexInner}>
-                        <Button size="small" color="primary" onClick={() => window.open(currentProject.repo, '_blank')}>
+                        <Button size="small" variant='contained' className={classes.btn} onClick={() => window.open(currentProject.repo, '_blank')}>
                             Repo
                         </Button>
-                        <Button size="small" color="primary" onClick={() => window.open(currentProject.app, '_blank')}>
+                        <Button size="small" variant='contained' className={classes.btn} onClick={() => window.open(currentProject.app, '_blank')}>
                             App
                         </Button>
                     </CardActions>
@@ -92,9 +107,11 @@ function Projects({ projects, currentProject, setCurrentProject }) {
                     <ArrowForwardIosIcon />
                 </IconButton>
             </div>
-            <div>
+            <div className={classes.smldivs}>
                 <h2>Usage</h2>
-                <FontAwesomeIcon icon={['fab', 'html5']} />
+                <div className={classes.flexInner}>
+                    {currentProject.usage.map(code => (<FontAwesomeIcon className={classes.icon} icon={['fab', code]} />))}
+                </div>
             </div>
         </div >
     )
