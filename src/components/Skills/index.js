@@ -1,13 +1,8 @@
 import React from 'react';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { BorderBottom } from '@material-ui/icons';
-
 
 
 
@@ -47,7 +42,6 @@ const useStyles = makeStyles({
     
     },
     title: {
-        fontSize: 14,
         borderBottom: '1px solid #7f5f16',
         marginBottom: 20,
         fontWeight: 'bolder',

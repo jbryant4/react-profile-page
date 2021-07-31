@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { about, details, projects, contact, skills } from "./profileData"
+import { about, projects, contact, skills } from "./profileData"
 import { makeStyles } from '@material-ui/styles';
 
 import Nav from './components/Nav'
@@ -43,15 +43,15 @@ function App() {
           currentProject={currentProject}
           setCurrentProject={setCurrentProject}
         />
-        break
+        
       case 'Contact':
         return <Contact />
-        break
+        
       case 'Skills':
         return <Skills
           skills={skills}
         />
-        break
+        
       default:
         return <About
           aboutInfo={about}

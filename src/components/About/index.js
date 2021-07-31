@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { CallMissedSharp } from '@material-ui/icons';
 
 
 const useStyles = makeStyles({
@@ -50,17 +49,17 @@ function About({ aboutInfo }) {
     return (
         <div className={classes.container}>
             <div className={classes.innerFlex}>
-                <img src={image[0]} alt='family photo' className={classes.image} />
+                <img src={image[0]} alt='wife' className={classes.image} />
                 <p className={classes.p}>{body}</p>
                 <p className={classes.p}>{body}</p>
-                <img src={image[1]} alt='family photo' className={classes.image} />
+                <img src={image[1]} alt='family' className={classes.image} />
             </div>
             
             <div>
                 <h2>Things I like:</h2>
                 <div className={classes.innerFlexImg}>
                     {hobbies.map(hobby => (
-                        <img key={hobby} src={hobby} alt='family photo' className={classes.image} />
+                        <img key={hobby} src={hobby} alt='hobby' className={classes.image} />
                     ))}
                 </div>
             </div>

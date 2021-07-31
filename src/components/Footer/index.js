@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DescriptionIcon from '@material-ui/icons/Description';
+import EmailIcon from '@material-ui/icons/Email';
 
 // style for the footer section
 const useStyles = makeStyles({
@@ -37,7 +38,7 @@ const useStyles = makeStyles({
 
 function Footer({ contact }) {
     const classes = useStyles()
-
+    
     return (
         <footer className={classes.footer}>
             <div className={classes.flex}>
@@ -46,6 +47,7 @@ function Footer({ contact }) {
                         <li><a href={contact.resume} target="blank" ><DescriptionIcon className={classes.item} fontSize='large'/></a></li>
                         <li><a href={contact.github} target="blank" ><GitHubIcon className={classes.item} fontSize='large'/></a></li>
                         <li><a href={contact.linkedIn} target="blank" ><LinkedInIcon className={classes.item} fontSize='large'/></a></li>
+                        <li><a href={`mailto:${contact.email}`} target="blank" ><EmailIcon className={classes.item} fontSize='large'/></a></li>
                     </ul>
             </div>
         </footer>

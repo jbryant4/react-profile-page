@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
@@ -14,7 +13,6 @@ import PersonIcon from '@material-ui/icons/Person';
 import CodeIcon from '@material-ui/icons/Code';
 import AppsIcon from '@material-ui/icons/Apps';
 import ViewHeadlineIcon from '@material-ui/icons/ViewHeadline';
-import zIndex from '@material-ui/core/styles/zIndex';
 
 const useStyles = makeStyles({
     flex: {

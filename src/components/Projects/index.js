@@ -110,7 +110,7 @@ function Projects({ projects, currentProject, setCurrentProject }) {
             <div className={classes.smldivs}>
                 <h2>Usage</h2>
                 <div className={classes.flexInner}>
-                    {currentProject.usage.map(code => (<FontAwesomeIcon className={classes.icon} icon={['fab', code]} />))}
+                    {currentProject.usage.map(code => (<FontAwesomeIcon key={code} className={classes.icon} icon={['fab', code]} />))}
                 </div>
             </div>
         </div >
