@@ -51,8 +51,6 @@ function About({ aboutInfo }) {
             <div className={classes.innerFlex}>
                 <img src={image[0]} alt='wife' className={classes.image} />
                 <p className={classes.p}>{body}</p>
-                <p className={classes.p}>{body}</p>
-                <img src={image[1]} alt='family' className={classes.image} />
             </div>
             
             <div>

@@ -116,7 +116,7 @@ function Nav({ tabs, setCurrentTab, currentTab }) {
         <>
             <div className={classes.nav}>
                 <Button  className={classes.p} onClick={toggleDrawer(left, true)}>NAV<ViewHeadlineIcon  /> </Button>
-                <p className={classes.p}>BryantC0der</p>
+                <p className={classes.p}>Joseph Bryant</p>
             </div>
             <Drawer anchor={left} open={state[left]} onClose={toggleDrawer(left, false)}>
                 {list(left)}
