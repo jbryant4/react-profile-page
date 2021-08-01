@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/react-profile-page/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/react-profile-page/static/js/main.f521c072.chunk.js",
+    "main.js.map": "/react-profile-page/static/js/main.f521c072.chunk.js.map",
+    "runtime-main.js": "/react-profile-page/static/js/runtime-main.1da18425.js",
+    "runtime-main.js.map": "/react-profile-page/static/js/runtime-main.1da18425.js.map",
+    "static/js/2.57ddffbf.chunk.js": "/react-profile-page/static/js/2.57ddffbf.chunk.js",
+    "static/js/2.57ddffbf.chunk.js.map": "/react-profile-page/static/js/2.57ddffbf.chunk.js.map",
+    "static/js/3.6617c26b.chunk.js": "/react-profile-page/static/js/3.6617c26b.chunk.js",
+    "static/js/3.6617c26b.chunk.js.map": "/react-profile-page/static/js/3.6617c26b.chunk.js.map",
+    "index.html": "/react-profile-page/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/react-profile-page/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.57ddffbf.chunk.js.LICENSE.txt": "/react-profile-page/static/js/2.57ddffbf.chunk.js.LICENSE.txt",
+    "static/media/board-pic.67b71aa8.jpg": "/react-profile-page/static/media/board-pic.67b71aa8.jpg",
+    "static/media/booklot.769d6a40.png": "/react-profile-page/static/media/booklot.769d6a40.png",
+    "static/media/budgetTracker.14353b65.PNG": "/react-profile-page/static/media/budgetTracker.14353b65.PNG",
+    "static/media/chess.1b351f98.png": "/react-profile-page/static/media/chess.1b351f98.png",
+    "static/media/deepThought.7cffbefb.PNG": "/react-profile-page/static/media/deepThought.7cffbefb.PNG",
+    "static/media/drwho.f64e0d13.png": "/react-profile-page/static/media/drwho.f64e0d13.png",
+    "static/media/family.f5ce91b3.jpg": "/react-profile-page/static/media/family.f5ce91b3.jpg",
+    "static/media/league-pic.c5528630.jpg": "/react-profile-page/static/media/league-pic.c5528630.jpg",
+    "static/media/mymovielis.47ea2186.png": "/react-profile-page/static/media/mymovielis.47ea2186.png",
+    "static/media/pc-build.bc8141a9.jpg": "/react-profile-page/static/media/pc-build.bc8141a9.jpg",
+    "static/media/shows.f302aebc.jpg": "/react-profile-page/static/media/shows.f302aebc.jpg",
+    "static/media/uSing.032158f6.png": "/react-profile-page/static/media/uSing.032158f6.png",
+    "static/media/wife.37a774f0.jpg": "/react-profile-page/static/media/wife.37a774f0.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1da18425.js",
+    "static/js/2.57ddffbf.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.f521c072.chunk.js"
+  ]
+}
